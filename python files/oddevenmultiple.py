@@ -1,0 +1,10 @@
+N=int(input())
+r=N%3
+if(r!=0):
+    print("-1")
+else:
+    n=N/3
+    if(n%2==0):
+        print("0")
+    else:
+        print("1")
