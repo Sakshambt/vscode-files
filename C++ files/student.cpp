@@ -10,13 +10,12 @@ public:
     student()
     {
         cout << "constructor 1 call:" << endl;
-        return;
     }
 
-    student(int a)
+    student(int rollno)
     {
         cout << "constructor 2 call:" << endl;
-        rollno = a;
+        rollno = rollno;
     }
 
     student(int a, int b)
@@ -26,8 +25,8 @@ public:
         age = b;
     }
 
-    display()
+    void display()
     {
         cout << age << " " << rollno << endl;
     }
-}
+};
