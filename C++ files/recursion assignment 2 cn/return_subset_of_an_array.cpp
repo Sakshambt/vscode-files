@@ -9,19 +9,9 @@ void printsubsequence(int a[], int n, int idx, string path)
         cout << path << endl;
         return;
     }
+
     printsubsequence(a, n, idx + 1, path);
     printsubsequence(a, n, idx + 1, to_string(a[idx]) + " " + path);
-}
-
-int sumsubsequence(int a[], int n, string path[], int s, string finaloutput[])
-{
-    if (n == 0)
-    {
-        path[0] == "";
-        return 0;
-    }
-
-    int small
 }
 
 int main()
@@ -33,6 +23,8 @@ int main()
     {
         cin >> a[i];
     }
+    int k;
+    cin >> k;
     printsubsequence(a, n, 0, "");
     return 0;
 }

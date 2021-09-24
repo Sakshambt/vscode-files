@@ -15,7 +15,7 @@ public:
     student(int rollno)
     {
         cout << "constructor 2 call:" << endl;
-        rollno = rollno;
+        this->rollno = rollno;
     }
 
     student(int a, int b)
