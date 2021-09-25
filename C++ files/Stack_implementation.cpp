@@ -4,7 +4,6 @@
 #include <string>
 using namespace std;
 
-template <class T>
 class stack
 {
     int index;
@@ -66,13 +65,13 @@ public:
 
 int main()
 {
-    stack<int> s(3); //calling stack name s
-    s.pop();         // stack is empty
-    s.top();         // stack is empty
-    s.push(1);       // Push element
-    s.push(11);      // Push element
-    s.push(2);       // Push element
-    s.push(13);      //stack is full
+    stack s(3); //calling stack name s
+    s.pop();    // stack is empty
+    s.top();    // stack is empty
+    s.push(1);  // Push element
+    s.push(11); // Push element
+    s.push(2);  // Push element
+    s.push(13); //stack is full
     int deleted = s.pop();
     if (deleted != INT_MIN)
     {
