@@ -50,7 +50,8 @@ Node *takeInput()
 }
 int length(Node *head)
 {
-    Node *temp = head;
+    n
+        Node *temp = head;
     int count = 0;
     while (temp != NULL)
     {
@@ -83,15 +84,53 @@ void printNode(int i, Node *head)
     }
     cout << temp->data << endl;
 }
+Node *reverse(Node *head)
+{
+    Node *prev = NULL;
+    Node *nex = NULL;
+    Node *curr = head;
+    while (curr != NULL)
+    {
+        nex = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = nex;
+    }
+    return head;
+}
+
+Node *dltNode(int i, Node *head)
+{
+    Node *temp = head;
+    if (i == 0)
+    {
+        temp = temp->next;
+        return temp;
+    }
+    int count = 0;
+    while (count < i - 1)
+    {
+        temp = temp->next;
+        count++;
+    }
+    Node *dlt = temp->next;
+    temp->next = dlt->next;
+    delete dlt;
+    return head;
+}
 
 int main()
 {
     Node *head = takeInput();
     print(head);
-    cout << length(head) << endl;
+    //cout << length(head) << endl;
     int i;
+    //cin >> i;
+    //printNode(i, head);
+    cout << "delete ";
     cin >> i;
-    printNode(i, head);
+    Node *head1 = dltNode(i, head);
+    print(head1);
 
     /*
 

@@ -1,6 +1,7 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
+        "*.ejs": "html",
         "iostream": "cpp",
         "array": "cpp",
         "atomic": "cpp",
@@ -46,6 +47,7 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "any": "cpp"
     }
 }
